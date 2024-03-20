@@ -2,6 +2,7 @@ from Token.Token import TOKEN as token
 import discord
 
 intents = discord.Intents.default()
+intents.message_content = True
 
 client = discord.Client(intents=intents)
 
