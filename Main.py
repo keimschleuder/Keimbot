@@ -5,7 +5,7 @@ from discord.ext import commands
 intents = discord.Intents.default()
 intents.message_content = True
 
-activity = discord.Activity(type=discord.ActivityType.watching, name="your fingers")
+activity = discord.Activity(type=discord.ActivityType.watching, name="dir zu")
 bot = commands.Bot(command_prefix = "!", activity=activity, intents = intents, status=discord.Status.online)
 
 @bot.event
@@ -14,7 +14,7 @@ async def on_ready():
 
 @bot.command()
 async def hello(ctx):
-    await ctx.send("Hello!")
+    await ctx.send("Hello! Keimschleuder made me")
 
 @bot.command()
 async def ping(ctx):
