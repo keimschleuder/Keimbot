@@ -15,7 +15,7 @@ async def on_ready():
 
 @bot.command()
 async def hello(ctx):
-    await ctx.send("Hello! Keimschleuder made me")
+    await ctx.send(f"Hello {ctx.author.mention}! Keimschleuder made me")
 
 @bot.command()
 async def ping(ctx):
