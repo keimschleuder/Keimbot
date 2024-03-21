@@ -1,4 +1,4 @@
-import Token.Token as Token
+from Token.Token import TOKEN as token
 import discord
 from discord.ext import commands
 import random
@@ -52,4 +52,4 @@ async def wave(ctx, to: discord.User = commands.Author):
 async def helpme(ctx):
     await ctx.send(f"Hello there, {ctx.author.mention}! \nI'm a Discord Bot made by Keimschleuder. I have some commands:\n\n1. `!roll count_of_dice number_of_sides` this command lets you roll dice.\n2. `!hug user` Hugs the given User\n3. `!ping` Responds with `Pong`\n4. `!wave` waves to a server member metioned\n5. `!hello` Just a friendly greeting")
 
-bot.run(Token.TOKEN)
+bot.run(token)
