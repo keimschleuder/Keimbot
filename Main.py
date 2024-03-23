@@ -21,9 +21,11 @@ async def hello(ctx):
 async def ping(ctx):
     await ctx.send("Pong")
 
-# Change to a format like 2d20
 @bot.command()
-async def roll(ctx, count: int = 1, sides: int = 6):
+async def roll(ctx, string: str = "1d6"):
+    string = string.split("d")
+    count = int(string[0])
+    sides = int(string[1])
     if count <= 0:
         await ctx.send(f"Cannot Roll less that one dice")
         return
