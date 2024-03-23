@@ -21,6 +21,7 @@ async def hello(ctx):
 async def ping(ctx):
     await ctx.send("Pong")
 
+# Change to a format like 2d20
 @bot.command()
 async def roll(ctx, count: int = 1, sides: int = 6):
     if count <= 0:
